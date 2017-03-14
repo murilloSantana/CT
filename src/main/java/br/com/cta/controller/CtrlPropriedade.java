@@ -48,7 +48,10 @@ public class CtrlPropriedade {
 
 	@RequestMapping(value = { "/propriedade" }, method = RequestMethod.GET)
 	public String pagePropriedades(Model model) throws Exception {
-
+//		utilGenerica.criaDiretorio(environment.getRequiredProperty(Constants.strLocalDiretorioRoot));
+//		utilGenerica.criaDiretorio(environment.getRequiredProperty(Constants.strLocalDiretorioPropriedades));
+		File arquivo = new File(environment.getRequiredProperty(Constants.strLocalDiretorioPropriedades));
+		utilGenerica.limparPasta(arquivo);
 		model.addAttribute("propriedade", new Propriedade());
 		return "propriedade";
 	}
@@ -66,35 +69,35 @@ public class CtrlPropriedade {
 		arquivos = validaPadraoArquivos(diretorioPropriedades, arquivos,
 				propriedade);
 
-		for (File arquivoPropriedade : arquivos) {
-
-			StringBuffer bufferHistoricoMudancas = new StringBuffer();
-			StringBuffer bufferNovaPropriedade = new StringBuffer();
-
-			bufferHistoricoMudancas.append(propriedade.getAutor());
-			bufferHistoricoMudancas.append(strSeparador);
-			bufferHistoricoMudancas.append(propriedade.getData());
-			bufferHistoricoMudancas.append(strSeparador);
-			bufferHistoricoMudancas.append("Cenário "
-					+ propriedade.getCenario());
-			bufferHistoricoMudancas.append(strSeparador);
-			bufferHistoricoMudancas.append("DriveAMnet "
-					+ propriedade.getVersaoDriveAMnet());
-			bufferHistoricoMudancas.append(strSeparador);
-			bufferHistoricoMudancas.append("Mantis "
-					+ propriedade.getNumeroMantis());
-			bufferHistoricoMudancas.append(strSeparador);
-			bufferHistoricoMudancas.append(propriedade.getDescricaoHistorico());
-
-			editaHistoricoMudancas(diretorioPropriedades,
-					bufferHistoricoMudancas.toString(),false);
+//		for (File arquivoPropriedade : arquivos) {
+//
+//			StringBuffer bufferHistoricoMudancas = new StringBuffer();
+//			StringBuffer bufferNovaPropriedade = new StringBuffer();
+//
+//			bufferHistoricoMudancas.append(propriedade.getAutor());
+//			bufferHistoricoMudancas.append(strSeparador);
+//			bufferHistoricoMudancas.append(propriedade.getData());
+//			bufferHistoricoMudancas.append(strSeparador);
+//			bufferHistoricoMudancas.append("Cenï¿½rio "
+//					+ propriedade.getCenario());
+//			bufferHistoricoMudancas.append(strSeparador);
+//			bufferHistoricoMudancas.append("DriveAMnet "
+//					+ propriedade.getVersaoDriveAMnet());
+//			bufferHistoricoMudancas.append(strSeparador);
+//			bufferHistoricoMudancas.append("Mantis "
+//					+ propriedade.getNumeroMantis());
+//			bufferHistoricoMudancas.append(strSeparador);
+//			bufferHistoricoMudancas.append(propriedade.getDescricaoHistorico());
+//
+//			editaHistoricoMudancas(diretorioPropriedades,
+//					bufferHistoricoMudancas.toString(),false);
 			//
 			// bufferNovaPropriedade.append(formataComentario(propriedade.getDescricaoPropriedade()));
 			// bufferNovaPropriedade.append(propriedade.getNovoValor());
 			//
 			// utilGenerica.salvarPropriedadeFimArquivo(bufferNovaPropriedade.toString(),
 			// arquivoLocal);
-		}
+//		}
 		return "redirect:propriedade";
 	}
 

@@ -137,10 +137,21 @@ public class UtilGenerica {
 		}
 	}
 	
-	public void criaArquivo(String arquivo) throws IOException{
+	public void criaDiretorio(String arquivo) throws IOException{
 		File fileArq = new File(arquivo);
 		
 		if(!fileArq.exists())
-			fileArq.createNewFile();
+			fileArq.mkdirs();
+	}
+	
+	public boolean limparPasta(File arquivo){
+		for (File file : arquivo.listFiles()) {
+			if(file.isDirectory()){
+				limparPasta(file);
+			}else{
+				file.delete();
+			}
+		}
+		return arquivo.delete();
 	}
 }

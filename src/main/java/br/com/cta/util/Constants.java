@@ -16,6 +16,10 @@ public class Constants {
 	public static String strVersaoRepositorio = "versao.repositorio";
 	public static String strPropriedadeRepositorioDiretorio = "propriedades.repositorio.diretorio";
 
+	public static String strLocalDiretorioRoot = "local.repositorio.root";
+	public static String strLocalDiretorioPropriedades = "local.repositorio.propriedades";
+	public static String strLocalDiretorioScripts = "local.repositorio.scripts";
+
 	
 	
 }
