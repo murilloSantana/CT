@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/styleReset.css}">
+<!--Import bootstrap.css-->
+<link rel="stylesheet" th:href="@{/static/css/bootstrap-theme.css}">
+<link rel="stylesheet" th:href="@{/static/css/bootstrap.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/styleTree.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/style.css}">
+	
+</head>
+<body>
+	<div class="container-fluid">
+		<header >
+			<div class="row">
+				<div th:replace="../../static/templates/header :: header"></div>
+			</div>
+		</header>
+		
+		<main>
+			<div class="row">
+				<div class="col-md-12">
+					<a th:href="@{/testesAutomatizados/massas/massaForm}" class="btn btn-primary">Cadastrar Massa</a>
+				</div>				
+			</div>
+			<br>
+			<div class="row">
+				
+				<div class="table-responsive col-md-12">
+					<table class="table table-striped table-hover">
+						<thead>
+							<tr>
+								<th>Nome</th>
+								<th>Número do Schema</th>
+								<th>Versão</th>
+								<th>Tipo do BD</th>
+								<th>Local de Backup</th>
+								<th>Informações</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Citi</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</main>
+		
+		<footer>
+		
+		</footer>
+	</div>
+
+	<script type="text/javascript" th:src="@{/static/js/libs/jquery-3.1.1.js}"></script>
+	<script th:src="@{/static/js/libs/bootstrap.js}"></script>
+	<script th:src="@{/static/js/libs/jstree.js}"></script>	
+	<script type="text/javascript" th:src="@{/static/js/libs/lib.js}"></script>
+
+</body>
+</html>

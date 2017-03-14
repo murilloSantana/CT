@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/styleReset.css}">
+<!--Import bootstrap.css-->
+<link rel="stylesheet" th:href="@{/static/css/bootstrap-theme.css}">
+<link rel="stylesheet" th:href="@{/static/css/bootstrap.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/styleTree.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/style.css}">
+	
+</head>
+<body>
+	<div class="container-fluid">
+		<header >
+			<div class="row">
+				<div th:replace="../../static/templates/header :: header"></div>
+			</div>
+		</header>
+		
+		<main id="main-projeto-teste">
+			<div class="row">
+				<div class="col-md-12">
+					<form th:action="@{/testesAutomatizados/salvarProjetoTeste}" th:object="${projetoTeste}" method="post">
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label for="prj-tst-nome">Nome do Projeto</label>
+								<input class="form-control" id="prj-tst-nome" placeholder="Informe o nome do Projeto" th:field="*{nomeProjetoTeste}"/>
+							</div>
+							<div class="form-group col-md-3">
+								<label for="prj-tst-dt-fim">Data de Prazo Final</label>
+								<input type="date" class="form-control" id="prj-tst-dt-fim" placeholder="Informe a data limite do Projeto" th:field="*{dataPrazoProjetoNonFormat}"/>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label for="prj-dt-cong">Data de Congelamento</label>
+								<input type="date"  class="form-control" id="prj-dt-cong" placeholder="Informe o nome do Projeto" th:field="*{dataCongelamentoNonFormat}"/>
+							</div>
+							<br>
+							<div class="col-md-3">
+								<div class="col-md-6">						
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" th:field="*{isProjetoAtivo}"/>Projeto Ativo?
+										</label>
+									</div>
+								</div>
+								<div class="col-md-6">						
+									<div class="">
+										<button type="submit" class="btn btn-default"  >Salvar Projeto</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="table-responsive col-md-12">
+					<table class="table table-striped table-hover">
+						<thead>
+							<tr>
+								<th>Nome do Projeto</th>
+								<th>Data de Inicio</th>
+								<th>Data Final</th>
+								<th>Data de Congelamento</th>
+								<th>Ativo?</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="projeto : ${projetosTestes}">
+								<td th:text="${projeto.nomeProjetoTeste}"></td>
+								<td th:text="${#dates.format(projeto.dataInicioProjeto.toDate(),'dd/MM/yyyy')}"></td>
+								<td th:text="${#dates.format(projeto.dataPrazoProjeto.toDate(),'dd/MM/yyyy')}"></td>
+								<td th:text="${#dates.format(projeto.dataCongelamentoProjeto.toDate(),'dd/MM/yyyy')}" ></td>
+								<td th:text="${projeto.isProjetoAtivo}"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</main>
+		
+		<footer>
+		
+		</footer>
+	</div>
+
+
+
+	<script type="text/javascript" th:src="@{/static/js/libs/jquery-3.1.1.js}"></script>
+	<script th:src="@{/static/js/libs/bootstrap.js}"></script>
+	<script th:src="@{/static/js/libs/jstree.js}"></script>	
+	<script type="text/javascript" th:src="@{/static/js/libs/lib.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/styleReset.css}">
+<!--Import bootstrap.css-->
+<link rel="stylesheet" th:href="@{/static/css/bootstrap-theme.css}">
+<link rel="stylesheet" th:href="@{/static/css/bootstrap.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/style.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/styleTree.css}">	
+</head>
+<body>
+
+	<div th:replace="../../static/templates/header :: header"></div>
+
+
+
+	<script type="text/javascript" th:src="@{/static/js/libs/jquery-3.1.1.js}"></script>
+	<script th:src="@{/static/js/libs/bootstrap.js}"></script>
+	<script th:src="@{/static/js/libs/jstree.js}"></script>	
+	<script type="text/javascript" th:src="@{/static/js/libs/lib.js}"></script>
+
+</body>
+</html>

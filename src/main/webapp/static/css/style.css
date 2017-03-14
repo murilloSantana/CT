@@ -1,0 +1,24 @@
+body{
+}
+main{
+	margin-top:8%;
+}
+#main-projeto-teste{
+	margin-top:5%;
+}
+.container-fluid{
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}
+
+#painel-tags,#tabela-tags{
+	
+}
+
+#painel-tags .panel-body{
+	overflow-y: scroll;
+	height:400px;
+	overflow-x: scroll;
+	width:100%;
+}

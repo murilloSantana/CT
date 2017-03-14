@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/styleReset.css}">
+<!--Import bootstrap.css-->
+<link rel="stylesheet" th:href="@{/static/css/bootstrap-theme.css}">
+<link rel="stylesheet" th:href="@{/static/css/bootstrap.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/styleTree.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/style.css}">
+	
+</head>
+<body>
+	<div class="container-fluid">
+		<header >
+			<div class="row">
+				<div th:replace="../../static/templates/header :: header"></div>
+			</div>
+		</header>
+		
+		<main>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<div class="panel-title">Formulário de Cadastro de Massas</div>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<form th:action="@{/testesAutomatizados/massas/salvarMassa}" th:object="${massa}" method="post">
+									<div class="form-group col-md-6">
+										<label for="massa-nome">Nome</label>
+										<input id="massa-nome" class="form-control" placeholder="Nome da Massa" th:field="*{nomeMassa}"/>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="massa-localbkp">Local do Backup</label>
+										<input id="massa-localbkp" class="form-control" placeholder="Local do Backup" th:field="*{localBkp}"/>
+									</div>
+									<div class="form-group col-md-4">
+										<label for="massa-versao">Versão</label>
+										<input id="massa-versao" class="form-control" placeholder="Versão da Massa" th:field="*{versao}"/>
+									</div>
+									<div class="form-group col-md-4">
+										<label for="massa-numerosch">Número do Schema</label>
+										<input id="massa-numerosch" class="form-control" placeholder="Número do Schema" th:field="*{numeroSchema}"/>
+									</div>
+									<div class="form-group col-md-4">
+										<label for="massa-tipo">Tipo Banco</label>
+
+										<select class="form-control" name="tipoBd">
+											<option  value=""  th:disabled="disabled" th:selected="selected">Selecione um Tipo</option>										
+											<option th:each="tipoBd : ${modelosBD}" th:value="${tipoBd}" th:text="${tipoBd}" ></option>
+										</select>
+									</div>
+									
+									
+									<div class="form-group col-md-12">
+										<label for="massa-info">Informações</label>
+										<textarea id="massa-info" class="form-control" cols="5" rows="5" th:field="*{infoMassa}"></textarea>
+									</div>
+									<div class="form-group col-md-12">
+										<button type="submit" class="btn btn-default pull-right" >Salvar Massa</button>
+									</div>
+								</form>
+							
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>				
+			</div>
+	
+		</main>
+		
+		<footer>
+		
+		</footer>
+	</div>
+
+	<script type="text/javascript" th:src="@{/static/js/libs/jquery-3.1.1.js}"></script>
+	<script th:src="@{/static/js/libs/bootstrap.js}"></script>
+	<script th:src="@{/static/js/libs/jstree.js}"></script>	
+	<script type="text/javascript" th:src="@{/static/js/libs/lib.js}"></script>
+
+</body>
+</html>

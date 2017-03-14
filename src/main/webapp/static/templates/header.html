@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/styleReset.css}">
+<!--Import bootstrap.css-->
+<link rel="stylesheet" th:href="@{/static/css/bootstrap-theme.css}">
+<link rel="stylesheet" th:href="@{/static/css/bootstrap.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/style.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/styleTree.css}">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+	
+	<title>Gerencia</title>
+</head>
+<body>
+	<div th:fragment="header">
+	 	<nav class="navbar navbar-inverse navbar-fixed-top col-md-12">
+	 			<!-- Menu responsivo -->
+	 			<div class="navbar-header">
+	 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false">
+	 					<span class="sr-only"></span>
+	 					<span class="icon-bar"></span>
+	 					<span class="icon-bar"></span>
+	 					<span class="icon-bar"></span>
+	 				</button>
+	 			</div>
+	 			
+	 			
+	 			<div class="collapse navbar-collapse" id="menu-principal">
+	 				<ul class="nav navbar-nav">
+	 					<li><a th:href="@{/home}">Home</a></li>
+	 					<li><a href="#">Relatórios</a></li>
+	 					<li>
+	 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Testes Automatizados <span class="caret"></span></a>
+	 					
+	 						<ul class="dropdown-menu">
+	 							<li><a th:href="@{/testesAutomatizados/propriedade}">Propriedade</a></li>
+	 							<li><a th:href="@{/testesAutomatizados/tags}">Tags</a></li>
+	 						</ul>
+	 					</li>
+	 				</ul>
+	 			</div>
+	 	</nav>
+  
+	</div>
+	
+	<script type="text/javascript" th:src="@{/static/js/libs/jquery-3.1.1.js}"></script>
+	<script th:src="@{/static/js/libs/bootstrap.js}"></script>
+	<script th:src="@{/static/js/libs/jstree.js}"></script>
+	<script type="text/javascript" th:src="@{/static/js/libs/lib.js}"></script>
+</body>
+</html>

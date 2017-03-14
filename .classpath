@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v8.0"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0 (3)"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/antlr-runtime-3.4.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jsch.agentproxy.connector-factory-0.0.7.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jsch.agentproxy.core-0.0.7.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jsch.agentproxy.pageant-0.0.7.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jsch.agentproxy.sshagent-0.0.7.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jsch.agentproxy.svnkit-trilead-ssh2-0.0.7.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jsch.agentproxy.usocket-jna-0.0.7.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jsch.agentproxy.usocket-nc-0.0.7.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/sequence-library-1.0.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/sqljet-1.1.10.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/svnkit-1.8.14.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/svnkit-cli-1.8.14.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/svnkit-javahl16-1.8.14.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/svnkit-javahl16-1.8.14-javadoc.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/svnkit-javahl16-1.8.14-sources.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/trilead-ssh2-1.0.0-build221.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

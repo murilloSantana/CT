@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/styleReset.css}">
+<!--Import bootstrap.css-->
+<link rel="stylesheet" th:href="@{/static/css/bootstrap-theme.css}">
+<link rel="stylesheet" th:href="@{/static/css/bootstrap.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/style.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/styleTree.css}">	
+</head>
+<body>
+	<div class="container-fluid">
+		<header >
+			<div class="row">
+				<div th:replace="../../static/templates/header :: header"></div>
+			</div>
+		</header>
+		
+		<main>
+			<div class="row">
+				<div class="col-md-12">
+					<form th:action="@{/testesAutomatizados/salvarConfiguracoesGerais}" method="post" th:object="${configuracaoGeral}">
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<div class="panel-title">Configurações Gerais Do CTA</div>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="form-group col-md-4">
+									<label>Versão URL Atual</label>
+									<input type="text" class="form-control" placeholder="Versão sem ponto 927" th:field="*{numeroVersao}" />
+								</div>
+								<div class="form-group col-md-4">
+									<label>Repositório Local de Tags</label>
+									<input type="text" class="form-control" placeholder="Caminho Repositório Local" th:field="*{repositorioTagsLocal}" />
+								</div>
+								<div class="form-group col-md-4">
+									<label>Repositório Local de Propriedades</label>
+									<input type="text" class="form-control" placeholder="Caminho Repositório Local de Arquivos de Propriedades" th:field="*{repositorioPropriedadesLocal}" />
+								</div>
+							 </div>
+								
+							<div class="row">
+								<div class="form-group col-md-4">
+									<button type="submit" class="btn btn-primary" >Salvar</button>
+								</div>
+	  							
+							</div>
+
+						</div>
+					</div>
+						
+					</form>
+				</div>
+				
+			</div>
+		</main>
+		
+		<footer>
+		
+		</footer>
+	</div>
+
+
+	<script type="text/javascript" th:src="@{/static/js/libs/jquery-3.1.1.js}"></script>
+	<script th:src="@{/static/js/libs/bootstrap.js}"></script>
+	<script th:src="@{/static/js/libs/jstree.js}"></script>	
+	<script type="text/javascript" th:src="@{/static/js/libs/lib.js}"></script>
+
+</body>
+</html>
